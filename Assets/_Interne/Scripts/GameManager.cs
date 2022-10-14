@@ -26,9 +26,16 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*crosshair*/
+        MouvementCrosshair();
+
+    }
+
+
+
+    public void MouvementCrosshair()
+    {
         target = mainCamera.transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, mainCamera.transform.position.z));
         crosshair.transform.position = new Vector2(-target.x, -target.y);
-        /*FIN*/
     }
+
 }

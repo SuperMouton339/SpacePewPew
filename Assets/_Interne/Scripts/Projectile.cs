@@ -28,4 +28,9 @@ public class Projectile : MonoBehaviour
     {
         
     }
+
+    public void Tirer()
+    {
+
+    }
 }
