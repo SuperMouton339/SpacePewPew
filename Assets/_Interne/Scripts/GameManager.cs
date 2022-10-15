@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
-{   /*crosshair*/
-    [SerializeField] private GameObject crosshair;
+{   
     private Vector3 target;
     /*FIN */
     
@@ -13,29 +12,46 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private Camera mainCamera;
 
+    [SerializeField] private Transform canon;
 
+    // Update is called once per frame
+    
     // Start is called before the first frame update
     void Start()
     {
         
-        /*crosshair*/
-        Cursor.visible = false;
-        /*FIN*/
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        MouvementCrosshair();
+        
 
     }
 
-
-
-    public void MouvementCrosshair()
+    void FixedUpdate()
     {
-        target = mainCamera.transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, mainCamera.transform.position.z));
-        crosshair.transform.position = new Vector2(-target.x, -target.y);
+        BougeCanonAvecAim();
+        
     }
 
+    
+    void BougeCanonAvecAim()
+    {
+        Ray rayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hitInfo;
+
+
+        if (Physics.Raycast(rayOrigin, out hitInfo))
+        {
+            if (hitInfo.collider != null)
+            {
+                //Diraction = Destination(hitInfo.point) - source (canon)
+                Vector3 direction = hitInfo.point - canon.position;
+
+                canon.rotation = Quaternion.LookRotation(direction);
+            }
+        }
+    }
 }
