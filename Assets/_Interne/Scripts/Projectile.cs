@@ -5,6 +5,8 @@ using TMPro;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private GameObject explosionMissile;
+
     void Start()
     {
         

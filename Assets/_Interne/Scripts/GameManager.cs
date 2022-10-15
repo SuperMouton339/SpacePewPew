@@ -39,17 +39,23 @@ public class GameManager : MonoBehaviour
     
     void BougeCanonAvecAim()
     {
-        Ray rayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray rayOrigin = Camera.main.ScreenPointToRay(GameObject.Find("Crosshair").transform.position);
         RaycastHit hitInfo;
 
 
         if (Physics.Raycast(rayOrigin, out hitInfo))
         {
+            Vector3 direction;
             if (hitInfo.collider != null)
             {
                 //Diraction = Destination(hitInfo.point) - source (canon)
-                Vector3 direction = hitInfo.point - canon.position;
+                direction = hitInfo.point - canon.position;
 
+                canon.rotation = Quaternion.LookRotation(direction);
+            }
+            else
+            {
+                direction = rayOrigin.GetPoint(75) - canon.position;
                 canon.rotation = Quaternion.LookRotation(direction);
             }
         }
