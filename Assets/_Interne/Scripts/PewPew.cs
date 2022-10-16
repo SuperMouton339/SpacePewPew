@@ -71,6 +71,7 @@ public class PewPew : MonoBehaviour
     void Start()
     {
         actions.Add("pew", Pew);
+        actions.Add("piou", Pew);
         
 
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
@@ -95,11 +96,12 @@ public class PewPew : MonoBehaviour
     //Fonctions de speech
     private void RecognizedSpeech(PhraseRecognizedEventArgs speech)
     {
+        Debug.Log(speech.text);
         actions[speech.text].Invoke();
     }
     private void Pew()
     {
-        Debug.Log("Je Pew");
+        
         VerifShoot();
     }
     
