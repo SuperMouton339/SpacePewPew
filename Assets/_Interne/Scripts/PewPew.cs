@@ -71,7 +71,10 @@ public class PewPew : MonoBehaviour
     void Start()
     {
         actions.Add("pew", Pew);
+        actions.Add("pew pew", Pew);
         actions.Add("piou", Pew);
+        actions.Add("piou piou", Pew);
+        
         
 
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
