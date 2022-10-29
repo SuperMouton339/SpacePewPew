@@ -100,14 +100,14 @@ public class GameManager : MonoBehaviour
         if (vies <= 0)
         {
             
-            textMilieu.text = "Vous êtes Mort!";
+            textMilieu.text = "Vous êtes mort!";
             textMilieu.gameObject.SetActive(true);
         }
     }
 
     private void Gagne()
     {
-        textMilieu.text = "Vous avez Gagné!";
+        textMilieu.text = "Vous avez gagné!";
         textMilieu.gameObject.SetActive(true);
     }
 }
