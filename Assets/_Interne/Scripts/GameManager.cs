@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     
 
     [SerializeField] private int vies = 3;
+    [SerializeField] private string textGagne = "Vous avez gagné!";
+    [SerializeField] private string textPerdu = "Vous êtes mort!";
     // Update is called once per frame
 
     // Start is called before the first frame update
@@ -100,14 +102,14 @@ public class GameManager : MonoBehaviour
         if (vies <= 0)
         {
             
-            textMilieu.text = "Vous êtes mort!";
+            textMilieu.text = textPerdu;
             textMilieu.gameObject.SetActive(true);
         }
     }
 
     private void Gagne()
     {
-        textMilieu.text = "Vous avez gagné!";
+        textMilieu.text = textGagne;
         textMilieu.gameObject.SetActive(true);
     }
 }
