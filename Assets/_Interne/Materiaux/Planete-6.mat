@@ -14,6 +14,7 @@ Material:
   - VIGNETTE_MASKED
   - _EMISSION
   - _GLOSSYREFLECTIONS_OFF
+  - _MAPPING_6_FRAMES_LAYOUT
   - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   - _SPECGLOSSMAP
   m_InvalidKeywords:
@@ -736,7 +737,7 @@ Material:
     - _Emission1CenterOutAudioLinkWidth: 1
     - _EmissionBaseColorAsMap: 0
     - _EmissionBaseColorAsMap1: 0
-    - _EmissionBlinkingEnabled: 0
+    - _EmissionBlinkingEnabled: 1
     - _EmissionBlinkingEnabled1: 0
     - _EmissionBlinkingOffset: 0
     - _EmissionBlinkingOffset1: 0
@@ -767,9 +768,9 @@ Material:
     - _EmissionStrength1: 0
     - _EmissiveBlink_Max: 1
     - _EmissiveBlink_Max1: 1
-    - _EmissiveBlink_Min: 0
+    - _EmissiveBlink_Min: 0.25
     - _EmissiveBlink_Min1: 0
-    - _EmissiveBlink_Velocity: 4
+    - _EmissiveBlink_Velocity: 2
     - _EmissiveBlink_Velocity1: 4
     - _EmissiveScroll_Interval: 20
     - _EmissiveScroll_Interval1: 20
@@ -792,7 +793,7 @@ Material:
     - _EnableEmission1StrengthAudioLink: 0
     - _EnableEmissionCenterOutAudioLink: 0
     - _EnableEmissionStrengthAudioLink: 0
-    - _EnableEnvironmentalRim: 0
+    - _EnableEnvironmentalRim: 1
     - _EnableFlipbook: 0
     - _EnableGITDEmission: 0
     - _EnableGITDEmission1: 0
@@ -1420,9 +1421,9 @@ Material:
     - m_start_backFace: 0
     - m_start_bakedLighting: 0
     - m_start_blending: 0
-    - m_start_blinkingEmissionOptions: 0
+    - m_start_blinkingEmissionOptions: 1
     - m_start_blinkingEmissionOptions1: 0
-    - m_start_brdf: 1
+    - m_start_brdf: 0
     - m_start_clearCoat: 0
     - m_start_crossfade: 0
     - m_start_debugOptions: 0

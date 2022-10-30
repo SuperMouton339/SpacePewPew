@@ -15,6 +15,7 @@ Material:
   - _EMISSION
   - _MAPPING_6_FRAMES_LAYOUT
   - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+  - _SPECGLOSSMAP
   m_InvalidKeywords:
   - _NORMALMAP
   m_LightmapFlags: 2
@@ -419,7 +420,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a38c3d286da02da46bbe0081d717105f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularMap1:
@@ -806,7 +807,7 @@ Material:
     - _EnableRimLighting: 0
     - _EnableSSS: 0
     - _EnableScifiSpawnIn: 0
-    - _EnableSpecular: 0
+    - _EnableSpecular: 1
     - _EnableSpecular1: 0
     - _EnableTouchGlow: 0
     - _EnableVertexGlitch: 0
@@ -1077,23 +1078,23 @@ Material:
     - _RgbNormalRUV: 0
     - _RgbNormalsEnabled: 0
     - _RimBrighten: 0
-    - _RimEnviroBlur: 0.7
+    - _RimEnviroBlur: 0.781
     - _RimEnviroIntensity: 1
     - _RimEnviroMaskUV: 0
     - _RimEnviroMinBrightness: 0
     - _RimEnviroSharpness: 0
-    - _RimEnviroWidth: 0.45
+    - _RimEnviroWidth: 0.195
     - _RimHueShift: 0
     - _RimHueShiftEnabled: 0
     - _RimHueShiftSpeed: 0
-    - _RimLightColorBias: 0.304
+    - _RimLightColorBias: 0.209
     - _RimLightNormal: 1
     - _RimLightingInvert: 0
     - _RimMaskUV: 0
     - _RimSharpness: 0
     - _RimStrength: 0
     - _RimTexUV: 0
-    - _RimWidth: 0.785
+    - _RimWidth: 0.408
     - _RimWidthNoiseStrength: 0.1
     - _RimWidthNoiseTextureUV: 0
     - _SSSDistortion: 1
@@ -1146,7 +1147,7 @@ Material:
     - _SpecularAnisoJitterMirrored: 0
     - _SpecularAnisoJitterMirrored1: 0
     - _SpecularHighlights: 1
-    - _SpecularInvertSmoothness: 0
+    - _SpecularInvertSmoothness: 1
     - _SpecularInvertSmoothness1: 0
     - _SpecularLMOcclusion: 0
     - _SpecularMap1UV: 0
@@ -1161,7 +1162,7 @@ Material:
     - _SpecularMetallicMapUV: 0
     - _SpecularNormal: 1
     - _SpecularNormal1: 1
-    - _SpecularSmoothness: 1
+    - _SpecularSmoothness: 0.873
     - _SpecularSmoothness1: 0.75
     - _SpecularToonEnd: 1
     - _SpecularToonEnd1: 1
@@ -1421,7 +1422,7 @@ Material:
     - m_start_blending: 0
     - m_start_blinkingEmissionOptions: 0
     - m_start_blinkingEmissionOptions1: 0
-    - m_start_brdf: 1
+    - m_start_brdf: 0
     - m_start_clearCoat: 0
     - m_start_crossfade: 0
     - m_start_debugOptions: 0
@@ -1460,13 +1461,13 @@ Material:
     - m_start_ralivAdvanced: 0
     - m_start_ralivOriface: 0
     - m_start_ralivPenetrator: 0
-    - m_start_reflectionRim: 0
+    - m_start_reflectionRim: 1
     - m_start_rimHueShift: 0
     - m_start_rimLightOptions: 0
     - m_start_rimWidthNoise: 0
     - m_start_scrollingEmissionOptions: 0
     - m_start_scrollingEmissionOptions1: 0
-    - m_start_specular: 0
+    - m_start_specular: 1
     - m_start_specular1: 0
     - m_start_subsurface: 0
     - m_start_vertexManipulation: 0
@@ -1652,7 +1653,7 @@ Material:
     - _RgbNormalGPan: {r: 0, g: 0, b: 0, a: 0}
     - _RgbNormalRPan: {r: 0, g: 0, b: 0, a: 0}
     - _RimEnviroMaskPan: {r: 0, g: 0, b: 0, a: 0}
-    - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimLightColor: {r: 0.8207547, g: 0.65505517, b: 0.40650585, a: 1}
     - _RimMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _RimTexPan: {r: 0, g: 0, b: 0, a: 0}
     - _RimWidthNoiseTexturePan: {r: 0, g: 0, b: 0, a: 0}

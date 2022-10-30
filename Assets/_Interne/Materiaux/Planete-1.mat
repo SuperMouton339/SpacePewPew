@@ -10,9 +10,11 @@ Material:
   m_Name: Planete-1
   m_Shader: {fileID: 4800000, guid: e9e18fbf88ba9eb44ab0d683cd27c2a3, type: 3}
   m_ValidKeywords:
+  - DISTORT
   - VIGNETTE_CLASSIC
   - VIGNETTE_MASKED
   - _COLORADDSUBDIFF_ON
+  - _GLOSSYREFLECTIONS_OFF
   - _MAPPING_6_FRAMES_LAYOUT
   - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   - _SPECGLOSSMAP
@@ -139,24 +141,24 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DissolveDetailNoise:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: d2b08e9dd82d76b4fa5e07bb95ff2196, type: 3}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _DissolveEdgeGradient:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b60b8211733a76c4b9a4322bfcf0b581, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DissolveMask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1fd5766df0745aa4da3ca476b41b1d86, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DissolveNoiseTexture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 3f0ebc93eb910fa4e83d2dbdc92fedb7, type: 3}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _DissolveToTexture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: aded3d8bdb52eb744964762b45920654, type: 3}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _DistortionFlowTexture:
         m_Texture: {fileID: 0}
@@ -259,7 +261,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
-        m_Texture: {fileID: 2800000, guid: 119bfe51061529d40929df43ea5b5687, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7960f3b319c2a4e4baad0c57ba8f9d48, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap2:
@@ -688,7 +690,7 @@ Material:
     - _DetailTexIntensity: 1
     - _DetailTexUV: 0
     - _DisableDirectionalInAdd: 1
-    - _DissolveAlpha: 0
+    - _DissolveAlpha: 0.534
     - _DissolveAlpha0: 0
     - _DissolveAlpha1: 0
     - _DissolveAlpha2: 0
@@ -700,13 +702,13 @@ Material:
     - _DissolveAlpha8: 0
     - _DissolveAlpha9: 0
     - _DissolveDetailNoiseUV: 0
-    - _DissolveDetailStrength: 0.1
+    - _DissolveDetailStrength: 0.435
     - _DissolveEdgeEmission: 0
-    - _DissolveEdgeHardness: 0.5
+    - _DissolveEdgeHardness: 0
     - _DissolveEdgeHueShift: 0
     - _DissolveEdgeHueShiftEnabled: 0
     - _DissolveEdgeHueShiftSpeed: 0
-    - _DissolveEdgeWidth: 0.025
+    - _DissolveEdgeWidth: 0.5
     - _DissolveEmission1Side: 2
     - _DissolveEmissionSide: 2
     - _DissolveHueShift: 0
@@ -719,7 +721,7 @@ Material:
     - _DissolveNoiseTextureUV: 0
     - _DissolveP2PEdgeLength: 0.1
     - _DissolveP2PWorldLocal: 0
-    - _DissolveToEmissionStrength: 0
+    - _DissolveToEmissionStrength: 0.6
     - _DissolveToTextureUV: 0
     - _DissolveType: 1
     - _DissolveUseVertexColors: 0
@@ -781,7 +783,7 @@ Material:
     - _EnableBRDF: 1
     - _EnableBulge: 0
     - _EnableClearCoat: 0
-    - _EnableDissolve: 0
+    - _EnableDissolve: 1
     - _EnableDissolveAudioLink: 0
     - _EnableDistortion: 0
     - _EnableDistortionAudioLink: 0
@@ -803,7 +805,7 @@ Material:
     - _EnableMirrorTexture: 0
     - _EnablePathing: 0
     - _EnableRandom: 0
-    - _EnableRimLighting: 0
+    - _EnableRimLighting: 1
     - _EnableSSS: 0
     - _EnableScifiSpawnIn: 0
     - _EnableSpecular: 1
@@ -1248,7 +1250,7 @@ Material:
     - m_ParallaxMap: 0
     - m_Patreon: 0
     - m_PostProcessing: 0
-    - m_Special_Effects: 0
+    - m_Special_Effects: 1
     - m_end_Alpha: 0
     - m_end_BlackLight: 0
     - m_end_BonusSliders: 0
@@ -1388,7 +1390,7 @@ Material:
     - m_start_Hologram: 0
     - m_start_Iridescence: 0
     - m_start_IridescenceAudioLink: 0
-    - m_start_Lighting: 1
+    - m_start_Lighting: 0
     - m_start_MainHueShift: 0
     - m_start_MainVertexColors: 0
     - m_start_Matcap2: 0
@@ -1426,7 +1428,7 @@ Material:
     - m_start_crossfade: 0
     - m_start_debugOptions: 0
     - m_start_detailShadows: 0
-    - m_start_dissolve: 0
+    - m_start_dissolve: 1
     - m_start_dissolveAudioLink: 0
     - m_start_dissolveHueShift: 0
     - m_start_dissolveMasking: 0
@@ -1558,14 +1560,14 @@ Material:
     - _DetailNormalMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _DetailTexPan: {r: 0, g: 0, b: 0, a: 0}
     - _DetailTint: {r: 1, g: 1, b: 1, a: 1}
-    - _DissolveDetailNoisePan: {r: 0, g: 0, b: 0, a: 0}
-    - _DissolveEdgeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DissolveDetailNoisePan: {r: -1, g: 1, b: 0, a: 0}
+    - _DissolveEdgeColor: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
     - _DissolveEndPoint: {r: 0, g: 1, b: 0, a: 0}
     - _DissolveMaskPan: {r: 0, g: 0, b: 0, a: 0}
-    - _DissolveNoiseTexturePan: {r: 0, g: 0, b: 0, a: 0}
+    - _DissolveNoiseTexturePan: {r: 1, g: -1, b: 0, a: 0}
     - _DissolveStartPoint: {r: 0, g: -1, b: 0, a: 0}
-    - _DissolveTextureColor: {r: 1, g: 1, b: 1, a: 1}
-    - _DissolveToTexturePan: {r: 0, g: 0, b: 0, a: 0}
+    - _DissolveTextureColor: {r: 0.7075472, g: 0, b: 0, a: 1}
+    - _DissolveToTexturePan: {r: 5, g: 0, b: 0, a: 0}
     - _DistortionMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _DistortionSpeed: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _DistortionSpeed1: {r: 0.5, g: 0.5, b: 0, a: 0}
