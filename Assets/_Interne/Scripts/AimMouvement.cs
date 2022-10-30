@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Microsoft.Kinect;
+using Microsoft.Kinect.Face;
 
 public class AimMouvement : MonoBehaviour
 {

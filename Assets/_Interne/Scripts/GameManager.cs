@@ -72,30 +72,6 @@ public class GameManager : MonoBehaviour
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //Fonctions pour Gagne ou perdre/Mourrir
     private void VerifMort()
     {
