@@ -35,4 +35,17 @@ public class AudioManager : MonoBehaviour
     {
         
     }
+
+    public void FairePew()
+    {
+        int sonAleatoire = Random.Range(0, pews.Length);
+        audioSource.PlayOneShot(pews[sonAleatoire]);
+    }
+
+
+    public void ImpactVaisseau()
+    {
+        int sonAleatoire = Random.Range(0, impacts.Length);
+        audioSource.PlayOneShot(impacts[sonAleatoire]);
+    }
 }

@@ -54,6 +54,11 @@ public class PewPew : MonoBehaviour
     //Pour fixer des bug
     public bool allowInvoke = true;
 
+
+    //les manager
+    [SerializeField] GameManager gameManager;
+    [SerializeField] AudioManager audioManager;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -145,6 +150,9 @@ public class PewPew : MonoBehaviour
     }
     private void Shoot()
     {
+        
+
+
         readyToShoot = false;
 
         //trouver la position exact de l'impact avec raycast
@@ -168,6 +176,9 @@ public class PewPew : MonoBehaviour
         GameObject currentMissile = Instantiate(projectiles, attackPoint.position, Quaternion.identity);
         //tourner le missile dans la direction tiré
         currentMissile.transform.forward = directionMissile.normalized;
+
+        audioManager.FairePew();
+
 
         //ajouter de la force au missile
         currentMissile.GetComponent<Rigidbody>().AddForce(directionMissile.normalized * shootForce, ForceMode.Impulse);

@@ -12,14 +12,18 @@ public class MouvementEnnemi : MonoBehaviour
     private void Awake()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        target = GameObject.Find("MainCamera");
+        target = GameObject.FindGameObjectWithTag("Player");
+
+
+
+
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        
+        VerifJoueurVivant();
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -32,7 +36,17 @@ public class MouvementEnnemi : MonoBehaviour
         Destroy(gameObject);
     }
     private void OnDestroy()
+    {   audioManager.ImpactVaisseau();
+        //Instantiate(animationMort);
+        
+    }
+
+
+    void VerifJoueurVivant()
     {
-        Instantiate(animationMort);
+        if (!gameManager.vivant)
+        {
+            Destroy(gameObject);
+        }
     }
 }
