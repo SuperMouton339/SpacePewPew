@@ -133,7 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8971ca46a77e39f4b9d4d434cd76d0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vaisseau: {fileID: 902589489395039289, guid: 63f6b5c348b9dcb439ac302536f146b8, type: 3}
+  audioManager: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
+  animationMort: {fileID: 0}
 --- !u!54 &1243949268275865176
 Rigidbody:
   m_ObjectHideFlags: 0

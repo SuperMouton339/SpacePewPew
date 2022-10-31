@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class MouvementEnnemi : MonoBehaviour
 {
-    [SerializeField] private GameManager gameManager;
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private GameObject animationMort;
     private GameObject target;
-
+    private GameManager gameManager;
 
     private void Awake()
     {
-
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         target = GameObject.Find("MainCamera");
     }
 
@@ -19,5 +20,19 @@ public class MouvementEnnemi : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision != null && collision.gameObject == target)
+        {
+            gameManager.PerdreVie();
+
+        }
+        Destroy(gameObject);
+    }
+    private void OnDestroy()
+    {
+        Instantiate(animationMort);
     }
 }
