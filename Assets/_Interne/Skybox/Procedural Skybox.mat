@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Procedural Skybox
+  m_Shader: {fileID: 4800000, guid: e64e4b74d8329b149a14c3684bfec82e, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Starmask:
+        m_Texture: {fileID: 2800000, guid: 71eb1cadc5880074bb3788081492b75e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stars:
+        m_Texture: {fileID: 2800000, guid: e5abb76ddd9d06449aca42c90f582132, type: 3}
+        m_Scale: {x: 5, y: 5}
+        m_Offset: {x: 0, y: 0}
+    - _Texture0:
+        m_Texture: {fileID: 2800000, guid: 713efc49b75fdd1498ec0d64c7f5836e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: b60b8211733a76c4b9a4322bfcf0b581, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TopTexture0:
+        m_Texture: {fileID: 2800000, guid: 6e8b5e6c8543b45ee9cbb5e63e4d3230, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Cloud2Thickness: -0.167
+    - _CloudHeight: 7.7
+    - _CloudSpeedLayer1: 0.15
+    - _CloudSpeedLayer2: 0.05
+    - _CloudThickness: 0.377
+    - _CloudTilingLayer1: 0.49
+    - _CloudTilingLayer2: 1.2
+    - _Float3: 4.71
+    - _Float4: 1
+    - _GlobalCloudSpeed: 0.075
+    - _HideHorizonGlowScale: 0.3
+    - _HorizonGlowIntensity: 0.75
+    - _HorizonMinAmount: 0.61
+    - _HorizonMinAmountAlways: 0.238
+    - _HorizonOffset: 1
+    - _HorizonScale: 0
+    - _HorizonSharpness: 12.64
+    - _HorizonSunGlowSharpness: 0.96
+    - _HorizonSunGlowSpread: 0.78
+    - _HorizonSunGlowSpreadMax: 3.65
+    - _HorizonSunGlowSpreadMin: 0
+    - _HorizonSunIntensity: 0.71
+    - _HorizonTintSunPower: 3
+    - _Lerp: 1
+    - _NightTransitionHorizionOffset: -1.4
+    - _NightTransitionHorizonDelay: -4.77
+    - _NightTransitionScale: 7.84
+    - _SunDiskScale: 1
+    - _SunDiskSharpness: 0.00457
+    - _SunDiskSharpnessSmallAdjust: 0
+    - _SunDiskSize: 0.165
+    - _SunDiskSizeAdjust: 0.0013
+    - _SunGlowIntensity: 1
+    - _SunGlowScale: 75
+    - _SunGlowSharpness: 121.97
+    - _SunGlowSize: 0
+    - _SunHorizonGlowSharpness: 0.814
+    - _SunHorizonGlowSharpnessAdjust: 0
+    - _SunHorizonGlowSize: 0.087
+    - _SunHorizonGlowSizeAdjust: 0
+    - _SunHorizonRadiusA: 1.35
+    - _SunHorizonRaduisB: 1.38
+    - _SunIntensity: 1.09
+    - _SunRadiusA: 1.81
+    - _SunRaduisB: 1.49
+    - __dirty: 0
+    m_Colors:
+    - _CloudColor: {r: 1, g: 1, b: 1, a: 0}
+    - _HorizonColor: {r: 0.9245283, g: 0.25729796, b: 0.2678889, a: 1}
+    - _NightColor: {r: 0.09251461, g: 0.09571571, b: 0.19811267, a: 0}
+    - _PannerMaskSpeed: {r: 1, g: 1, b: 0, a: 0}
+    - _SkyColor: {r: 0.12001417, g: 0.37305877, b: 0.8207547, a: 1}
+    - _SmoothstepMinMax: {r: 0.59, g: 0.73, b: 0, a: 0}
+    - _SmoothstepMinMax2: {r: 0, g: 1, b: 0, a: 0}
+    - _SunGlowSize: {r: 185.8, g: 1.01, b: 0.22, a: 0}
+    - _TilingFalloff: {r: 0.00001, g: 1, b: 0, a: 0}
+    - _Vector0: {r: 185.8, g: 1.01, b: 0.22, a: 0}
+  m_BuildTextureStacks: []
