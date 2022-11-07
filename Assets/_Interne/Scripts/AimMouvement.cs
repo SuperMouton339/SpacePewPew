@@ -5,20 +5,25 @@ using Microsoft.Kinect;
 using Microsoft.Kinect.Face;
 using extOSC;
 
+
 public class AimMouvement : MonoBehaviour
 {
     public string xAddress = "/teteHorizontal";
     public string yAddress = "/teteVertical";
     
     public OSCReceiver posReceiver;
+    RectTransform UI_Element;
+    private float x;
+    private float y;
 
-    private Vector3 crosshairPos;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
-         crosshairPos = transform.position;
-
+   
+        UI_Element = GameObject.Find("Crosshair").GetComponent<RectTransform>();
         posReceiver.Bind(xAddress, ReceiveMessageX);
         posReceiver.Bind(yAddress, ReceiveMessageY);
 
@@ -29,21 +34,20 @@ public class AimMouvement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        transform.position = crosshairPos;
-
+        Debug.Log("X:" + x);
+        UI_Element.anchoredPosition = new Vector3(x, y, 0f);
     }
     void ReceiveMessageX(OSCMessage message)
     {
-        float x = message.Values[0].FloatValue;
+        x = message.Values[0].FloatValue;
         
-        crosshairPos.x = x;
     }
     void ReceiveMessageY(OSCMessage message)
     {
-        float y = message.Values[0].FloatValue;
-
-        crosshairPos.y = y;
-       
+        y = message.Values[0].FloatValue;
+        
     }
+
+
 }
+
