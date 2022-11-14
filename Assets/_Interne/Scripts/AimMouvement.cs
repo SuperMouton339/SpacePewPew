@@ -42,12 +42,12 @@ public class AimMouvement : MonoBehaviour
 
         if (joueurDetecte)
         {
-            Debug.Log("Je detecte le joueur");
+            //Debug.Log("Je detecte le joueur");
             UI_Element.anchoredPosition = new Vector3(x, y, 0f);
         }
         else
         {
-            Debug.Log("Je ne detecte pas le joueur");
+            //Debug.Log("Je ne detecte pas le joueur");
             transform.position = Input.mousePosition;
         }
         
