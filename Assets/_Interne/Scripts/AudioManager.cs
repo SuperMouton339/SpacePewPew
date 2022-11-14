@@ -50,7 +50,6 @@ public class AudioManager : MonoBehaviour
     }
     public void ExplosionMissile(AudioSource audioSourceMissile)
     {
-        int sonAleatoire = Random.Range(0, explosions.Length);
-        audioSourceMissile.PlayOneShot(explosions[sonAleatoire]);
+        
     }
 }

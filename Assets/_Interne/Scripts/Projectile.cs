@@ -40,7 +40,7 @@ public class Projectile : MonoBehaviour
     {
         if(explosionMissile != null)
         {
-            GameObject.Find("AudioManager").GetComponent<AudioManager>().ExplosionMissile(gameObject.GetComponent<AudioSource>());
+            
             Instantiate(explosionMissile, gameObject.transform.position, Quaternion.identity);
         }
     }
