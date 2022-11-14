@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour
     {
         if(explosionMissile != null)
         {
-            Instantiate(explosionMissile, gameObject.transform);
+            Instantiate(explosionMissile, gameObject.transform.position, Quaternion.identity);
         }
     }
 }
