@@ -10,12 +10,13 @@ public class AimMouvement : MonoBehaviour
 {
     public string xAddress = "/teteHorizontal";
     public string yAddress = "/teteVertical";
+    public string messageJoueur = "/joueurDetecte";
     
     public OSCReceiver posReceiver;
     RectTransform UI_Element;
     private float x;
     private float y;
-
+    private bool joueurDetecte;
 
     
 
@@ -24,8 +25,12 @@ public class AimMouvement : MonoBehaviour
     {
    
         UI_Element = GameObject.Find("Crosshair").GetComponent<RectTransform>();
-        posReceiver.Bind(xAddress, ReceiveMessageX);
-        posReceiver.Bind(yAddress, ReceiveMessageY);
+        
+            posReceiver.Bind(xAddress, ReceiveMessageX);
+            posReceiver.Bind(yAddress, ReceiveMessageY);
+            posReceiver.Bind(messageJoueur, JoueurDetecte);
+        
+        
 
         
         Cursor.visible = false;
@@ -34,9 +39,33 @@ public class AimMouvement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("X:" + x);
-        UI_Element.anchoredPosition = new Vector3(x, y, 0f);
+
+        if (joueurDetecte)
+        {
+            Debug.Log("Je detecte le joueur");
+            UI_Element.anchoredPosition = new Vector3(x, y, 0f);
+        }
+        else
+        {
+            Debug.Log("Je ne detecte pas le joueur");
+            transform.position = Input.mousePosition;
+        }
+        
     }
+
+    void JoueurDetecte(OSCMessage message)
+    {
+        if(message.Values[0].FloatValue > 0)
+        {
+            joueurDetecte = true;
+        }
+        else
+        {
+            joueurDetecte = false;
+        }
+       
+    }
+
     void ReceiveMessageX(OSCMessage message)
     {
         x = message.Values[0].FloatValue;

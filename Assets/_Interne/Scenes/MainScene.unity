@@ -196,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bcbd290cb22ddd54aa1cea09a39b8ec0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bcbd290cb22ddd54aa1cea09a39b8ec0, type: 3}
       propertyPath: m_TagString
@@ -1424,6 +1424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xAddress: /teteHorizontal
   yAddress: /teteVertical
+  messageJoueur: /joueurDetecte
   posReceiver: {fileID: 618812369}
 --- !u!114 &1985546759
 MonoBehaviour:
@@ -1628,6 +1629,10 @@ PrefabInstance:
     - target: {fileID: 8425314047563988962, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425314047563988965, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8425314047563988967, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
       propertyPath: m_RootOrder
