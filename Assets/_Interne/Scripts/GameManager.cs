@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
-{   
-    
+{
+
     //Manager UI et BUT
+    private float progressionTimer = 0;
     [SerializeField] private float tempsExperienceMinute;
     [SerializeField] private int vies = 3;
     [SerializeField] private string textGagne = "Vous avez gagné!";
     [SerializeField] private string textPerdu = "Vous êtes mort!";
+    [SerializeField] private Slider sliderProgression;
 
     //Manager Ennemi
     [SerializeField] private int tempsPremierSpawnEnnemiSeconde = 50;
@@ -33,13 +36,13 @@ public class GameManager : MonoBehaviour
     private GameObject ennemiTarget;
 
     public bool vivant = true;
+    public bool gagne = false;
 
     // Start is called before the first frame update
     void Start()
     {
         ennemiTarget = GameObject.Find("HitTarget");
         tempsExperienceMinute *= 60;
-        Invoke("Gagne", tempsExperienceMinute);
         Invoke("SpawnEnnemi", tempsPremierSpawnEnnemiSeconde);
         
     }
@@ -54,7 +57,12 @@ public class GameManager : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (vivant && !gagne)
+        {
+        ProgressBar();
         BougeCanonAvecAim();
+        }
+        
         
     }
 
@@ -114,6 +122,22 @@ public class GameManager : MonoBehaviour
         
     }
 
+    //progress bar en fonction du timer donner
+    private void ProgressBar()
+    {
+        
+        progressionTimer += Time.deltaTime;
+        sliderProgression.value = ( progressionTimer / tempsExperienceMinute);
+        if(progressionTimer >= tempsExperienceMinute)
+        {
+            gagne = true;
+            Gagne();
+        }
+        
+        
+    }
+
+
 
     //Fonctions pour Gagne ou perdre/Mourrir
     private void VerifMort()
@@ -128,16 +152,17 @@ public class GameManager : MonoBehaviour
 
     private void Gagne()
     {
-        if (vivant)
-        {
+        
             textMilieu.text = textGagne;
             textMilieu.gameObject.SetActive(true);
-        }
+            
+        
         
     }
 
     public void PerdreVie()
     {
         vies--;
+        audioManager.ImpactVaisseau();
     }
 }

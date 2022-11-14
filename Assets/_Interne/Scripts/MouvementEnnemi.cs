@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MouvementEnnemi : MonoBehaviour
 {
-    [SerializeField] private AudioManager audioManager;
+    
     [SerializeField] private GameObject animationMort;
     private GameObject target;
     private GameManager gameManager;
@@ -36,7 +36,7 @@ public class MouvementEnnemi : MonoBehaviour
         Destroy(gameObject);
     }
     private void OnDestroy()
-    {   audioManager.ImpactVaisseau();
+    {   
         //Instantiate(animationMort);
         
     }
@@ -44,7 +44,7 @@ public class MouvementEnnemi : MonoBehaviour
 
     void VerifJoueurVivant()
     {
-        if (!gameManager.vivant)
+        if (!gameManager.vivant || gameManager.gagne)
         {
             Destroy(gameObject);
         }

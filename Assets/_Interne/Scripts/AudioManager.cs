@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     //impact / explosion / musique / alarme / wipers / pew / ennemis / scienceFiction / moteur
 
     [SerializeField] private AudioClip[] impacts;
-    [SerializeField] private AudioClip[] explosions;
+    [SerializeField] public AudioClip[] explosions;
     [SerializeField] private AudioClip[] pews;
     [SerializeField] private AudioClip[] ennemis;
     [SerializeField] private AudioClip[] ambiants;
@@ -36,10 +36,10 @@ public class AudioManager : MonoBehaviour
         
     }
 
-    public void FairePew()
+    public void FairePew(AudioSource audioSourceMissile)
     {
         int sonAleatoire = Random.Range(0, pews.Length);
-        audioSource.PlayOneShot(pews[sonAleatoire]);
+        audioSourceMissile.PlayOneShot(pews[sonAleatoire]);
     }
 
 
@@ -47,5 +47,10 @@ public class AudioManager : MonoBehaviour
     {
         int sonAleatoire = Random.Range(0, impacts.Length);
         audioSource.PlayOneShot(impacts[sonAleatoire]);
+    }
+    public void ExplosionMissile(AudioSource audioSourceMissile)
+    {
+        int sonAleatoire = Random.Range(0, explosions.Length);
+        audioSourceMissile.PlayOneShot(explosions[sonAleatoire]);
     }
 }

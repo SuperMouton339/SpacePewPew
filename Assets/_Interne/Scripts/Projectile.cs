@@ -17,7 +17,10 @@ public class Projectile : MonoBehaviour
     {
         
     }
-
+    private void Awake()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().FairePew(gameObject.GetComponent<AudioSource>());
+    }
     private void OnCollisionEnter(Collision collision)
     {
         
@@ -37,6 +40,7 @@ public class Projectile : MonoBehaviour
     {
         if(explosionMissile != null)
         {
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().ExplosionMissile(gameObject.GetComponent<AudioSource>());
             Instantiate(explosionMissile, gameObject.transform.position, Quaternion.identity);
         }
     }

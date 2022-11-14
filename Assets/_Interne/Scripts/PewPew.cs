@@ -177,7 +177,7 @@ public class PewPew : MonoBehaviour
         //tourner le missile dans la direction tiré
         currentMissile.transform.forward = directionMissile.normalized;
 
-        audioManager.FairePew();
+        
 
 
         //ajouter de la force au missile
