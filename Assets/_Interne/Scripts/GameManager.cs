@@ -18,8 +18,10 @@ public class GameManager : MonoBehaviour
     //Manager Ennemi
     [SerializeField] private int tempsPremierSpawnEnnemiSeconde = 50;
     [SerializeField] private GameObject[] ennemis;
+    
     [SerializeField] private int rapiditeEnnemi = 50;
-
+    [SerializeField] private int limiteEnnemi = 3;//limite d'ennemi sur scene
+    public int compteurEnnemis ; //quantite ennemis sur la scene
 
     [SerializeField] private Camera mainCamera;
     [SerializeField] private Transform canon;
@@ -43,8 +45,8 @@ public class GameManager : MonoBehaviour
     {
         ennemiTarget = GameObject.Find("HitTarget");
         tempsExperienceMinute *= 60;
-        Invoke("SpawnEnnemi", tempsPremierSpawnEnnemiSeconde);
-        
+        Invoke("SpawnEnnemi", (float)Random.Range(3, 8));
+
     }
 
     // Update is called once per frame
@@ -61,6 +63,7 @@ public class GameManager : MonoBehaviour
         {
         ProgressBar();
         BougeCanonAvecAim();
+        VerifEnnemi();
         }
         
         
@@ -91,14 +94,31 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SpawnEnnemi()
+    public void VerifEnnemi()
     {
-        if (vivant)
-        {
+            
+            
+            
+
+        
+
+
+            
+
+
+        
+        
+        
+    }
+    public void SpawnEnnemi()
+    {       
+        if (compteurEnnemis < limiteEnnemi)
+        {   
+            compteurEnnemis++;
             int x = Random.Range(-600, 600);
             int y = Random.Range(-400, 400);
             int z = 700;
-
+            
             //Vector3 targetDirection = new Vector3(ennemiTarget.transform.position.x, ennemiTarget.transform.position.y, ennemiTarget.transform.position.z);
             Vector3 spawnPosition = new Vector3(x, y, z);
 
@@ -110,17 +130,17 @@ public class GameManager : MonoBehaviour
             //deplacement
             ennemi.GetComponent<Rigidbody>().AddForce(targetDirection.normalized * rapiditeEnnemi, ForceMode.Impulse);
             //regard
-            ennemi.transform.LookAt(mainCamera.transform.position,Vector3.up);
-
-        
-
+            ennemi.transform.LookAt(mainCamera.transform.position, Vector3.up);
 
             Invoke("SpawnEnnemi", (float)Random.Range(3, 8));
-
-
         }
-        
+        else
+        {
+            Invoke("SpawnEnnemi", (float)Random.Range(3, 8));
+        }
     }
+
+
 
     //progress bar en fonction du timer donner
     private void ProgressBar()

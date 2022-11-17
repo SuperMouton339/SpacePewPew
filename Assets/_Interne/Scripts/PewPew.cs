@@ -190,7 +190,7 @@ public class PewPew : MonoBehaviour
         //le temps avant de tiré le prochain missile
         if (allowInvoke)
         {
-            Invoke("ResetShot", timeBetweenShooting);
+            ResetShot();
             allowInvoke = false;
         }
     }

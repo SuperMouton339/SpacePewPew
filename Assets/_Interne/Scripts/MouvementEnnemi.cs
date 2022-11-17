@@ -36,9 +36,9 @@ public class MouvementEnnemi : MonoBehaviour
         Destroy(gameObject);
     }
     private void OnDestroy()
-    {   
+    {
         //Instantiate(animationMort);
-        
+        gameManager.compteurEnnemis--;
     }
 
 
