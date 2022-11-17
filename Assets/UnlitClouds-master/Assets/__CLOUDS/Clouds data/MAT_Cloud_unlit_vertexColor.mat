@@ -2,14 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MAT_Cloud_unlit_vertexColor
   m_Shader: {fileID: 4800000, guid: 5f9da8a4a2663eb479c175487d2f421c, type: 3}
-  m_ShaderKeywords: 
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -39,6 +40,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _3dNoiseSize: -3.86
     - _3dNoiseSizeA: 0.8
@@ -68,7 +70,7 @@ Material:
     - _TessMax: 10.94
     - _TessMin: 0.7
     - _TessPhongStrength: 0.241
-    - _TessValue: 21.6
+    - _TessValue: 18.5
     - _VertexColorMult: 1.16
     - _Wrap: -1
     - __dirty: 0
@@ -103,6 +105,7 @@ Material:
     - _PlayerPos: {r: 1.77, g: 6.11, b: -31.65, a: 0}
     - _RimColor: {r: 0.14150941, g: 0.14150941, b: 0.07542719, a: 0}
     - _SmoothStep: {r: 0.2, g: 0.83, b: 0, a: 0}
-    - _TextureColor: {r: 0.509434, g: 0.43494126, b: 0.5047782, a: 1}
+    - _TextureColor: {r: 0.3018868, g: 0.25489497, b: 0.29941356, a: 1}
     - _Tiling: {r: 0.04, g: 0.04, b: 0, a: 0}
     - _re: {r: 0, g: 0.08, b: 0, a: 0}
+  m_BuildTextureStacks: []
