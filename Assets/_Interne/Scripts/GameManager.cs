@@ -1,18 +1,18 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
     //Manager UI et BUT
     private float progressionTimer = 0;
     [SerializeField] private float tempsExperienceMinute;
     [SerializeField] private int vies = 3;
-    [SerializeField] private string textGagne = "Vous avez gagné!";
-    [SerializeField] private string textPerdu = "Vous êtes mort!";
+    [SerializeField] private string textGagne = "Vous avez gagnÃ©!";
+    [SerializeField] private string textPerdu = "Vous Ãªtes mort!";
     [SerializeField] private Slider sliderProgression;
 
     //Manager Ennemi
@@ -45,8 +45,10 @@ public class GameManager : MonoBehaviour
     {
         ennemiTarget = GameObject.Find("HitTarget");
         tempsExperienceMinute *= 60;
-        Invoke("SpawnEnnemi", (float)Random.Range(3, 8));
-
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            Invoke("SpawnEnnemi", (float)Random.Range(3, 8));
+        }
     }
 
     // Update is called once per frame
