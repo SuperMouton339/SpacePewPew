@@ -138,22 +138,22 @@ public class PewPew : MonoBehaviour
     public void VerifShoot()
     {
         //condition pour shoot
-        if (readyToShoot) //&& !reloading && missilesLeft>0
+        /*if (readyToShoot) //&& !reloading && missilesLeft>0
         {
-            
+            */
 
             
 
             //missilesShot = 0;   
             Shoot();
-        }
+        //}
     }
     private void Shoot()
     {
         
 
 
-        readyToShoot = false;
+        //readyToShoot = false;
 
         //trouver la position exact de l'impact avec raycast
         Ray rayOrigin = Camera.main.ScreenPointToRay(crosshair.transform.position);
@@ -188,11 +188,11 @@ public class PewPew : MonoBehaviour
         //missilesShot++;
 
         //le temps avant de tiré le prochain missile
-        if (allowInvoke)
+        /*if (allowInvoke)
         {
             ResetShot();
             allowInvoke = false;
-        }
+        }*/
     }
 
 

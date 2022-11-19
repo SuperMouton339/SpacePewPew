@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15854532, g: 0.16087809, b: 0.15006295, a: 1}
+  m_IndirectSpecularColor: {r: 0.15854555, g: 0.16087824, b: 0.1500631, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -404,7 +404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bcbd290cb22ddd54aa1cea09a39b8ec0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bcbd290cb22ddd54aa1cea09a39b8ec0, type: 3}
       propertyPath: m_TagString
@@ -2942,9 +2942,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectiles: {fileID: 8469355286763631434, guid: 27a94f3d72355244ca0c4738ad54c790, type: 3}
   crosshair: {fileID: 1985546756}
-  shootForce: 75
+  shootForce: 150
   upwardForce: 0
-  timeBetweenShooting: 0.1
+  timeBetweenShooting: 0
   timeBetweenShots: 0
   shootTime: 0
   shooting: 0
@@ -4105,8 +4105,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2055683509}
     - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
+      propertyPath: limiteEnnemi
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
       propertyPath: rapiditeEnnemi
-      value: 50
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
       propertyPath: sliderProgression
@@ -4161,6 +4165,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
+      propertyPath: pews.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
+      propertyPath: impacts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
+      propertyPath: pews.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f02e9acf3fbeb479582ef11132eaa1e4, type: 3}
+    - target: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
+      propertyPath: impacts.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f7b3386666d4549109722fbd137e2fe8, type: 3}
+    - target: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
+      propertyPath: impacts.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fdfb45c3f8434b7eac4264593a253ec, type: 3}
+    - target: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
+      propertyPath: impacts.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b1c00f2beab2649cfa13ebcca5bd3d91, type: 3}
+    - target: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
+      propertyPath: impacts.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f999cd04dd354d6399424d9e20858e3, type: 3}
+    - target: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
+      propertyPath: impacts.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6be01c5b21bda4d6687720106ef54fad, type: 3}
+    - target: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
+      propertyPath: impacts.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 604d394be40eb4d40a688e2b847a3d6a, type: 3}
+    - target: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
+      propertyPath: impacts.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 604d394be40eb4d40a688e2b847a3d6a, type: 3}
     - target: {fileID: 8425314047563988965, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0

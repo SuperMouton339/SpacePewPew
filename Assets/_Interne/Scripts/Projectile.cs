@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour
 
     void Start()
     {
-        Invoke("Destroy", 5f);
+        Invoke("Destroy", 10f);
     }
 
     // Update is called once per frame
