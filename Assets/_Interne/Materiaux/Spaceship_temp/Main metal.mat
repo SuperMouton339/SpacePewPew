@@ -242,7 +242,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MatcapMask:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -1424,7 +1424,7 @@ Material:
     - _MainTexPan: {r: 0, g: 0, b: 0, a: 0}
     - _Matcap2Color: {r: 1, g: 1, b: 1, a: 1}
     - _Matcap2MaskPan: {r: 0, g: 0, b: 0, a: 0}
-    - _MatcapColor: {r: 1, g: 0.4575472, b: 0.93684256, a: 1}
+    - _MatcapColor: {r: 1, g: 0.7612808, b: 0.45882356, a: 1}
     - _MatcapMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _MetalReflectionTint: {r: 1, g: 1, b: 1, a: 1}
     - _MetallicMaskPan: {r: 0, g: 0, b: 0, a: 0}

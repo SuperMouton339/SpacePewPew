@@ -1424,7 +1424,7 @@ Material:
     - _MainTexPan: {r: 0, g: 0, b: 0, a: 0}
     - _Matcap2Color: {r: 1, g: 1, b: 1, a: 1}
     - _Matcap2MaskPan: {r: 0, g: 0, b: 0, a: 0}
-    - _MatcapColor: {r: 0.41229087, g: 0.70168906, b: 0.8018868, a: 1}
+    - _MatcapColor: {r: 0.8, g: 0.59956187, b: 0.4117647, a: 1}
     - _MatcapMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _MetalReflectionTint: {r: 1, g: 1, b: 1, a: 1}
     - _MetallicMaskPan: {r: 0, g: 0, b: 0, a: 0}
