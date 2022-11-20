@@ -120,8 +120,8 @@ public class GameManager : MonoBehaviour
         if (compteurEnnemis < limiteEnnemi)
         {   
             compteurEnnemis++;
-            int x = Random.Range(-600, 600);
-            int y = Random.Range(-400, 400);
+            int x = Random.Range(-450, 450);
+            int y = Random.Range(-250, 250);
             int z = 700;
             
             //Vector3 targetDirection = new Vector3(ennemiTarget.transform.position.x, ennemiTarget.transform.position.y, ennemiTarget.transform.position.z);
