@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
     //[SerializeField] private int vies = 3;
     [SerializeField] private GameObject[] listeVies;
     [SerializeField] private GameObject mort;
-    //[SerializeField] private string textGagne = "Vous avez gagné!";   
-    //[SerializeField] private string textPerdu = "Vous êtes mort!";
+    [SerializeField] private string textGagne = "Vous avez gagné!";   
+    [SerializeField] private string textPerdu = "Vous êtes mort!";
     [SerializeField] private Slider sliderProgression;
 
     //Manager Ennemi
@@ -170,8 +170,8 @@ public class GameManager : MonoBehaviour
     private void Gagne()
     {
             
-            /*textMilieu.text = textGagne;
-            textMilieu.gameObject.SetActive(true);*/
+            textMilieu.text = textGagne;
+            textMilieu.gameObject.SetActive(true);
             
         
         
@@ -180,9 +180,10 @@ public class GameManager : MonoBehaviour
         
             
             mort.gameObject.SetActive(true);
-            
-        
-        
+        textMilieu.text = textPerdu;
+        textMilieu.gameObject.SetActive(true);
+
+
     }
 
     public void PerdreVie()
