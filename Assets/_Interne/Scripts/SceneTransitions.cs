@@ -9,4 +9,9 @@ public class SceneTransitions : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Permet de charger la scène suivante, selon l'ordre des scènes dans le SceneManagement (Activé la scène étant à un numéro +1 que celle actuelle)
     }
+
+    public void LevelWon ()
+    {
+        Debug.Log("Won");
+    }
 }
