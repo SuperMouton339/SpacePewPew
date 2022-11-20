@@ -39,8 +39,8 @@ public class PewPew : MonoBehaviour
     private int missilesShot;
     //les BOOLS
     public bool shooting; //variable qui te permet de shoot
-    private bool readyToShoot;
-    private bool reloading;
+   // private bool readyToShoot;
+    //private bool reloading;
 
     //REFERENCE
     [SerializeField] private Transform attackPoint;
@@ -68,7 +68,7 @@ public class PewPew : MonoBehaviour
         
 
         */
-        readyToShoot = true;
+        //readyToShoot = true;
     }
 
 
@@ -196,11 +196,11 @@ public class PewPew : MonoBehaviour
     }
 
 
-    private void ResetShot()
+    /*private void ResetShot()
     {
         readyToShoot = true;
         allowInvoke = true;
-    }
+    }*/
 
     // Si on veut mettre un reload
     /*

@@ -404,7 +404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bcbd290cb22ddd54aa1cea09a39b8ec0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bcbd290cb22ddd54aa1cea09a39b8ec0, type: 3}
       propertyPath: m_TagString
@@ -3012,7 +3012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649165221}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.09, y: -1.24, z: 3.58}
+  m_LocalPosition: {x: -0.09, y: -2.796, z: 2.653}
   m_LocalScale: {x: 1, y: 1, z: 2.8458}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4089,6 +4089,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
+      propertyPath: mort
+      value: 
+      objectReference: {fileID: 252930587}
+    - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
       propertyPath: canon
       value: 
       objectReference: {fileID: 1649165226}
@@ -4121,6 +4125,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
+      propertyPath: listeVies.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
       propertyPath: ennemis.Array.data[0]
       value: 
       objectReference: {fileID: 1616953971274444786, guid: c7d8b377db57e73488703ab6a70a8d6e, type: 3}
@@ -4150,8 +4158,20 @@ PrefabInstance:
       objectReference: {fileID: 1572856700538155276, guid: b02e8873c837fe34a9398fc37861cbc9, type: 3}
     - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
       propertyPath: tempsExperienceMinute
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
+      propertyPath: listeVies.Array.data[0]
+      value: 
+      objectReference: {fileID: 1804815675}
+    - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
+      propertyPath: listeVies.Array.data[1]
+      value: 
+      objectReference: {fileID: 1402712402}
+    - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
+      propertyPath: listeVies.Array.data[2]
+      value: 
+      objectReference: {fileID: 1396420309}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
 --- !u!1001 &8425314048210354769

@@ -10,13 +10,16 @@ public class GameManager : MonoBehaviour
     //Manager UI et BUT
     private float progressionTimer = 0;
     [SerializeField] private float tempsExperienceMinute;
-    [SerializeField] private int vies = 3;
-    [SerializeField] private string textGagne = "Vous avez gagné!";
-    [SerializeField] private string textPerdu = "Vous êtes mort!";
+
+    //[SerializeField] private int vies = 3;
+    [SerializeField] private GameObject[] listeVies;
+    [SerializeField] private GameObject mort;
+    //[SerializeField] private string textGagne = "Vous avez gagné!";   
+    //[SerializeField] private string textPerdu = "Vous êtes mort!";
     [SerializeField] private Slider sliderProgression;
 
     //Manager Ennemi
-    [SerializeField] private int tempsPremierSpawnEnnemiSeconde = 50;
+    //[SerializeField] private int tempsPremierSpawnEnnemiSeconde = 50;
     [SerializeField] private GameObject[] ennemis;
     
     [SerializeField] private int rapiditeEnnemi = 50;
@@ -54,7 +57,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        VerifMort();
+       
         
 
     }
@@ -162,21 +165,21 @@ public class GameManager : MonoBehaviour
 
 
     //Fonctions pour Gagne ou perdre/Mourrir
-    private void VerifMort()
-    {
-        if (vies <= 0)
-        {
-            vivant = false;
-            textMilieu.text = textPerdu;
-            textMilieu.gameObject.SetActive(true);
-        }
-    }
+   
 
     private void Gagne()
     {
+            
+            /*textMilieu.text = textGagne;
+            textMilieu.gameObject.SetActive(true);*/
+            
         
-            textMilieu.text = textGagne;
-            textMilieu.gameObject.SetActive(true);
+        
+    }private void Perdre()
+    {
+        
+            
+            mort.gameObject.SetActive(true);
             
         
         
@@ -184,7 +187,24 @@ public class GameManager : MonoBehaviour
 
     public void PerdreVie()
     {
-        vies--;
-        audioManager.ImpactVaisseau();
+        for (int i = 0; i < listeVies.Length; i++) //Boucle parcourant la grandeur du tableau listeVies
+        {
+            //listeVies[i].GetComponent<image>().sprite == variableAvecImage si on vx utiliser un changement d'image
+            if (listeVies[i].activeInHierarchy == true) //si l'élément se trouvant dans le tableau listeVies à l'index i EST activer dans la hierarchy des GameObject
+            {
+                listeVies[i].SetActive(false); // désactiver l'élément du tableau listeVies à l'index i
+
+                if (i == listeVies.Length - 1) // si l'index i est egale a la grandeur du tableau listeVies -1
+                {
+
+                    Perdre(); //lancer la fonction GameOver
+                    return;//arreter la boucle
+                }
+                audioManager.ImpactVaisseau(); //faire jouer la variable audio audioPerteVie lorsque le perso perd une vie
+                return; //arreter la boucle
+            }
+        }
+        
+        
     }
 }
