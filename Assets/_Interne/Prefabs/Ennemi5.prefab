@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4209291799629748564}
   m_Layer: 0
   m_Name: Ennemi5
-  m_TagString: Untagged
+  m_TagString: Ennemi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,5 +149,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8971ca46a77e39f4b9d4d434cd76d0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
   animationMort: {fileID: 0}

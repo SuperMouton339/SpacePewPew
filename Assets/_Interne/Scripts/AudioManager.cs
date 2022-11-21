@@ -48,12 +48,12 @@ public class AudioManager : MonoBehaviour
         audioSourceMissile.PlayOneShot(pews[sonAleatoire]);
     }
 
-
     public void ImpactVaisseau()
     {
         int sonAleatoire = Random.Range(0, impacts.Length);
         audioSource.PlayOneShot(impacts[sonAleatoire]);
     }
+
     public void ExplosionMissile(AudioSource audioSourceMissile)
     {
         
@@ -74,5 +74,22 @@ public class AudioManager : MonoBehaviour
     public void Transition()
     {
         sceneTransitions.IntroAnimation();
+    }
+
+    public void DialoguePerdu()
+    {
+        audioSource.PlayOneShot(dialogueDefaite);
+        sceneTransitions.PerduAnimation();
+    }
+
+    public void DialogueGagne()
+    {
+        audioSource.PlayOneShot(dialogueVictoire);
+        Invoke("TransitionGagne", dialogueVictoire.length);
+    }
+
+    public void TransitionGagne()
+    {
+        sceneTransitions.GagneAnimation();
     }
 }

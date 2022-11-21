@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     //[SerializeField] private int tempsPremierSpawnEnnemiSeconde = 50;
     [SerializeField] private GameObject[] ennemis;
     
-    [SerializeField] private int rapiditeEnnemi = 50;
+    [SerializeField] private int rapiditeEnnemi = 35;
     [SerializeField] private int limiteEnnemi = 3;//limite d'ennemi sur scene
     public int compteurEnnemis ; //quantite ennemis sur la scene
 
@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
 
     //Manager les Manager
     [SerializeField] private AudioManager audioManager;
+
+    //Animations
+    [SerializeField] private Animator fadeAnim;
 
 
     //Manager temporaire
@@ -49,9 +52,11 @@ public class GameManager : MonoBehaviour
     {
         ennemiTarget = GameObject.Find("HitTarget");
         tempsExperienceMinute *= 60;
+
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             audioManager.DialogueIntro(); //faire jouer le dialogue d'intro
+            fadeAnim.Play("FonduNoir");
         }
 
         else if (SceneManager.GetActiveScene().buildIndex == 1)
@@ -72,9 +77,14 @@ public class GameManager : MonoBehaviour
     {
         if (vivant && !gagne)
         {
-        ProgressBar();
-        BougeCanonAvecAim();
-        VerifEnnemi();
+            ProgressBar();
+            BougeCanonAvecAim();
+            VerifEnnemi();
+        }
+
+        else
+        {
+            rapiditeEnnemi = 0;
         }
         
         
@@ -156,7 +166,6 @@ public class GameManager : MonoBehaviour
     //progress bar en fonction du timer donner
     private void ProgressBar()
     {
-        
         progressionTimer += Time.deltaTime;
         sliderProgression.value = ( progressionTimer / tempsExperienceMinute);
         if(progressionTimer >= tempsExperienceMinute)
@@ -164,8 +173,6 @@ public class GameManager : MonoBehaviour
             gagne = true;
             Gagne();
         }
-        
-        
     }
 
 
@@ -175,17 +182,16 @@ public class GameManager : MonoBehaviour
 
     private void Gagne()
     {
-            
-            textMilieu.text = textGagne;
-            textMilieu.gameObject.SetActive(true);
-            
-        
-        
+        audioManager.DialogueGagne();
     }
     
     private void Perdre()
     {
+        rapiditeEnnemi = 0;
+        audioManager.DialoguePerdu();
+        fadeAnim.Play("FonduNoir 2");
         mort.gameObject.SetActive(true);
+        vivant = false;
     }
 
     public void PerdreVie()
@@ -199,7 +205,6 @@ public class GameManager : MonoBehaviour
 
                 if (i == listeVies.Length - 1) // si l'index i est egale a la grandeur du tableau listeVies -1
                 {
-
                     Perdre(); //lancer la fonction GameOver
                     return;//arreter la boucle
                 }
