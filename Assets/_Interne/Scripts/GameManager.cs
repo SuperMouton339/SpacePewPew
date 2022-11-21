@@ -49,7 +49,12 @@ public class GameManager : MonoBehaviour
     {
         ennemiTarget = GameObject.Find("HitTarget");
         tempsExperienceMinute *= 60;
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            audioManager.DialogueIntro(); //faire jouer le dialogue d'intro
+        }
+
+        else if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             Invoke("SpawnEnnemi", (float)Random.Range(3, 8));
         }

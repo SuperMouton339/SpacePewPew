@@ -5,14 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransitions : MonoBehaviour
 {
-    [SerializeField] private Animator standBy;
+    [SerializeField] private Animator environnement;
     public void SceneChangement()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Permet de charger la scène suivante, selon l'ordre des scènes dans le SceneManagement (Activé la scène étant à un numéro +1 que celle actuelle)
     }
 
-    public void LevelWon ()
+    public void IntroAnimation()
     {
-        standBy.Play("environnement_stand-by", 0, 0f);
+        environnement.Play("main_mouvements");
+    }
+
+    public void LevelWon()
+    {
+        environnement.Play("environnement_stand-by");
     }
 }

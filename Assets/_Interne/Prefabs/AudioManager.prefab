@@ -84,6 +84,9 @@ MonoBehaviour:
   moteurIdle: {fileID: 0}
   moteurPart: {fileID: 0}
   moteurMarche: {fileID: 0}
+  dialogueIntro: {fileID: 8300000, guid: 62ce1464d5f3d0745ba7ff4d24992215, type: 3}
+  dialogueVictoire: {fileID: 8300000, guid: 93430b5005fdbda4abf135c1aa938d5a, type: 3}
+  dialogueDefaite: {fileID: 8300000, guid: ccfb2ab0d3ad8ff4bb1149037cc561f7, type: 3}
   audioSource: {fileID: 8425314047563988965}
 --- !u!82 &8425314047563988965
 AudioSource:

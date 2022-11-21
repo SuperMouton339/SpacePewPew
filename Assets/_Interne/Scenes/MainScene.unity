@@ -17847,9 +17847,21 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
+      propertyPath: dialogueIntro
+      value: 
+      objectReference: {fileID: 8300000, guid: 62ce1464d5f3d0745ba7ff4d24992215, type: 3}
+    - target: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
+      propertyPath: dialogueDefaite
+      value: 
+      objectReference: {fileID: 8300000, guid: ccfb2ab0d3ad8ff4bb1149037cc561f7, type: 3}
+    - target: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
       propertyPath: pews.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
+      propertyPath: dialogueVictoire
+      value: 
+      objectReference: {fileID: 8300000, guid: 93430b5005fdbda4abf135c1aa938d5a, type: 3}
     - target: {fileID: 8425314047563988964, guid: 58e355adc1056114ba2d3da5e365bf6e, type: 3}
       propertyPath: impacts.Array.size
       value: 5

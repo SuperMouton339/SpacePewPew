@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    [SerializeField] private SceneTransitions sceneTransitions;
     //impact / explosion / musique / alarme / wipers / pew / ennemis / scienceFiction / moteur
 
     [SerializeField] private AudioClip[] impacts;
@@ -20,6 +21,12 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip moteurPart;
     [SerializeField] private AudioClip moteurMarche;
 
+    [SerializeField] public AudioClip dialogueIntro;
+    [SerializeField] public AudioClip dialogueVictoire;
+    [SerializeField] public AudioClip dialogueDefaite;
+
+    [SerializeField] public AudioClip dialogueCommencerJeu;
+
     [SerializeField] public AudioSource audioSource;
 
 
@@ -27,7 +34,6 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -51,5 +57,22 @@ public class AudioManager : MonoBehaviour
     public void ExplosionMissile(AudioSource audioSourceMissile)
     {
         
+    }
+
+    public void DialogueIntro()
+    {
+        audioSource.PlayOneShot(dialogueIntro);
+        Invoke("Decollage", dialogueIntro.length);
+    }
+
+    public void Decollage()
+    {
+        audioSource.PlayOneShot(dialogueCommencerJeu);
+        Invoke("Transition", dialogueCommencerJeu.length);
+    }
+
+    public void Transition()
+    {
+        sceneTransitions.IntroAnimation();
     }
 }
