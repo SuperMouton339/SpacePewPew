@@ -30,8 +30,7 @@ public class SceneTransitions : MonoBehaviour
 
     public void PerduAnimation()
     {
-        Debug.Log("End");
-        environnement.Play("environnement_explosion");
+        environnement.speed = 0;
     }
 
     public void LevelWon()
