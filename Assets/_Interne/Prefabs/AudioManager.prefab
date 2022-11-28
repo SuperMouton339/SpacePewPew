@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fea1ceb9d6e39240b4c03888365984b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneTransitions: {fileID: 0}
   impacts:
   - {fileID: 8300000, guid: 5e0779eb704324f548756611f655d570, type: 3}
   - {fileID: 8300000, guid: abe37c2f78370428286d11073d76ed8a, type: 3}
@@ -84,9 +85,10 @@ MonoBehaviour:
   moteurIdle: {fileID: 0}
   moteurPart: {fileID: 0}
   moteurMarche: {fileID: 0}
-  dialogueIntro: {fileID: 8300000, guid: 62ce1464d5f3d0745ba7ff4d24992215, type: 3}
-  dialogueVictoire: {fileID: 8300000, guid: 93430b5005fdbda4abf135c1aa938d5a, type: 3}
-  dialogueDefaite: {fileID: 8300000, guid: ccfb2ab0d3ad8ff4bb1149037cc561f7, type: 3}
+  dialogueIntro: {fileID: 8300000, guid: 43f1a76f31e6d4045a0bff0b7de9b73c, type: 3}
+  dialogueVictoire: {fileID: 8300000, guid: fd71c5d7780a0497092f7109552ec2eb, type: 3}
+  dialogueDefaite: {fileID: 8300000, guid: 4fc7775bafb6d4d379b617dd3e136da8, type: 3}
+  dialogueCommencerJeu: {fileID: 8300000, guid: ca85465a3c434408b8a4bc7f2a1266d0, type: 3}
   audioSource: {fileID: 8425314047563988965}
 --- !u!82 &8425314047563988965
 AudioSource:
