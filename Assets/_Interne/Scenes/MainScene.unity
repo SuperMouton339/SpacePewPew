@@ -17963,7 +17963,7 @@ PrefabInstance:
       objectReference: {fileID: 1572856700538155276, guid: b02e8873c837fe34a9398fc37861cbc9, type: 3}
     - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
       propertyPath: tempsExperienceMinute
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
       propertyPath: listeVies.Array.data[0]
