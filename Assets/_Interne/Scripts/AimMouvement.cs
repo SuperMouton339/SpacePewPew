@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Microsoft.Kinect;
-using Microsoft.Kinect.Face;
 using extOSC;
+using UnityEngine.SceneManagement;
 
 
 public class AimMouvement : MonoBehaviour
@@ -17,18 +16,21 @@ public class AimMouvement : MonoBehaviour
     private float x;
     private float y;
     private bool joueurDetecte;
+    private GameManager gameManager;
+    private int fctionAppeler = 0;
+    private float secondeDappel;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         UI_Element = GameObject.Find("Crosshair").GetComponent<RectTransform>();
-
+        secondeDappel = gameManager.tempsDappelDialogueIntro;
         posReceiver.Bind(xAddress, ReceiveMessageX);
         posReceiver.Bind(yAddress, ReceiveMessageY);
-        //posReceiver.Bind(messageJoueur, JoueurDetecte);
+        posReceiver.Bind(messageJoueur, JoueurDetecte);
 
 
 
@@ -41,8 +43,19 @@ public class AimMouvement : MonoBehaviour
     {
 
 
-        //Debug.Log("Je detecte le joueur");
-        UI_Element.anchoredPosition = new Vector3(x, y, 0f);
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+
+            UI_Element.anchoredPosition = new Vector3(x, y, 0f);
+            
+
+        }else if(joueurDetecte && SceneManager.GetActiveScene().buildIndex == 0 && fctionAppeler<1)
+        {
+            fctionAppeler++;
+            Invoke("DialogueIntro", secondeDappel);
+        }
+        
+        
 
         /*else
         {
@@ -58,7 +71,7 @@ public class AimMouvement : MonoBehaviour
         {
             joueurDetecte = true;
         }
-        else
+        else if(message.Values[0].FloatValue == 0)
         {
             joueurDetecte = false;
         }
@@ -76,5 +89,9 @@ public class AimMouvement : MonoBehaviour
 
     }
 
+
+    void DialogueIntro() {
+        gameManager.audioManager.DialogueIntro();
+    }
 
 }
