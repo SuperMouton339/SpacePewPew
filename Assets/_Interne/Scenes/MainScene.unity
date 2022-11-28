@@ -11793,6 +11793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   environnement: {fileID: 1407400768}
+  screenshake: {fileID: 0}
   fadeAnim: {fileID: 1929425317}
 --- !u!4 &1414847656 stripped
 Transform:
@@ -14655,6 +14656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   environnement: {fileID: 1407400768}
+  screenshake: {fileID: 0}
   fadeAnim: {fileID: 0}
 --- !u!1 &1959966910
 GameObject:

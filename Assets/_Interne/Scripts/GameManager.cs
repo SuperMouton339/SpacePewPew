@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     //Manager UI et BUT
     private float progressionTimer = 0;
     [SerializeField] private float tempsExperienceMinute;
+    [SerializeField] public float tempsDappelDialogueIntro = 10;
 
     //[SerializeField] private int vies = 3;
     [SerializeField] private GameObject[] listeVies;
@@ -32,7 +33,7 @@ public class GameManager : MonoBehaviour
 
 
     //Manager les Manager
-    [SerializeField] private AudioManager audioManager;
+    [SerializeField] public AudioManager audioManager;
 
     //Animations
     [SerializeField] private Animator fadeAnim;
@@ -46,6 +47,8 @@ public class GameManager : MonoBehaviour
 
     public bool vivant = true;
     public bool gagne = false;
+    public bool joueurDetecte = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +58,7 @@ public class GameManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            audioManager.DialogueIntro(); //faire jouer le dialogue d'intro
+            //audioManager.DialogueIntro(); //faire jouer le dialogue d'intro
             fadeAnim.Play("FonduNoir");
         }
 
@@ -79,7 +82,7 @@ public class GameManager : MonoBehaviour
         {
             ProgressBar();
             BougeCanonAvecAim();
-            VerifEnnemi();
+            //VerifEnnemi();
         }
 
         else
