@@ -6,26 +6,28 @@ using UnityEngine.SceneManagement;
 public class SceneTransitions : MonoBehaviour
 {
     [SerializeField] private Animator environnement;
+    [SerializeField] private Animator screenshake;
     [SerializeField] private Animator fadeAnim;
 
     public void SceneChangement()
     {
-        // Si la scène active est la deuxième (Scène Fin)
+        // Si la scï¿½ne active est la deuxiï¿½me (Scï¿½ne Fin)
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            SceneManager.LoadScene(0); // Charger la première scène dans le tableau (Intro)
+            SceneManager.LoadScene(0); // Charger la premiï¿½re scï¿½ne dans le tableau (Intro)
         }
 
-        // Sinon, si la scène n'est pas celle de Fin
+        // Sinon, si la scï¿½ne n'est pas celle de Fin
         else
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Permet de charger la scène suivante, selon l'ordre des scènes dans le SceneManagement (Activé la scène étant à un numéro +1 que celle actuelle)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Permet de charger la scï¿½ne suivante, selon l'ordre des scï¿½nes dans le SceneManagement (Activï¿½ la scï¿½ne ï¿½tant ï¿½ un numï¿½ro +1 que celle actuelle)
         }
     }
 
     public void IntroAnimation()
     {
         environnement.Play("main_mouvements");
+        screenshake.Play("Screen_shake_intro");
     }
 
     public void PerduAnimation()
