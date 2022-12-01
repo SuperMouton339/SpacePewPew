@@ -45,15 +45,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempsExperienceMinute: 0.5
-  vies: 3
+  tempsDappelDialogueIntro: 10
+  listeVies: []
+  mort: {fileID: 0}
   textGagne: "Vous avez gagn\xE9!"
   textPerdu: "Vous \xEAtes mort!"
-  tempsPremierSpawnEnnemiSeconde: 1
+  animPerdu: {fileID: 0}
+  sliderProgression: {fileID: 0}
   ennemis:
   - {fileID: 1616953971274444786, guid: c7d8b377db57e73488703ab6a70a8d6e, type: 3}
   - {fileID: 8328876288349213744, guid: faec50318f434e04aa065bfba36725c7, type: 3}
+  - {fileID: 4629641061117572984, guid: 00a1d14632ea8254a87912709833bb63, type: 3}
+  - {fileID: 5180876080643858713, guid: 2a2d6c1bb71c95d4895c2371471c49c3, type: 3}
+  - {fileID: 3578101488088698044, guid: ca6bbc2e9bfcff849bd5db99fdf0d197, type: 3}
+  - {fileID: 2922103445682246176, guid: 6de946d2974ad5c43b1900c0fd372ba0, type: 3}
+  - {fileID: 1572856700538155276, guid: b02e8873c837fe34a9398fc37861cbc9, type: 3}
   rapiditeEnnemi: 0
+  limiteEnnemi: 3
+  compteurEnnemis: 0
   mainCamera: {fileID: 0}
   canon: {fileID: 0}
   audioManager: {fileID: 0}
+  fadeAnim: {fileID: 0}
   textMilieu: {fileID: 0}
+  vivant: 1
+  gagne: 0
+  joueurDetecte: 0
