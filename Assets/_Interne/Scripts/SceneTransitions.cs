@@ -21,6 +21,7 @@ public class SceneTransitions : MonoBehaviour
         else
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Permet de charger la sc�ne suivante, selon l'ordre des sc�nes dans le SceneManagement (Activ� la sc�ne �tant � un num�ro +1 que celle actuelle)
+            Invoke("IntroGame", 3f);
         }
     }
 
@@ -28,6 +29,11 @@ public class SceneTransitions : MonoBehaviour
     {
         environnement.Play("main_mouvements");
         screenshake.Play("Screen_shake_intro");
+    }
+
+    public void IntroGame()
+    {
+        fadeAnim.Play("DebutJeuUX");
     }
 
     public void PerduAnimation()

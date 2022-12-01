@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string textPerdu = "Vous êtes mort!";
     [SerializeField] private GameObject animPerdu;
     [SerializeField] private Slider sliderProgression;
+    [SerializeField] private GameObject sliderObject;
+    [SerializeField] private GameObject listeViesObject;
 
     //Manager Ennemi
     //[SerializeField] private int tempsPremierSpawnEnnemiSeconde = 50;
@@ -65,6 +67,7 @@ public class GameManager : MonoBehaviour
         else if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             Invoke("SpawnEnnemi", (float)Random.Range(3, 8));
+            Invoke("IntroGame", 1.5f);
         }
     }
 
@@ -91,6 +94,13 @@ public class GameManager : MonoBehaviour
         }
         
         
+    }
+
+    public void IntroGame()
+    {
+        sliderObject.SetActive(true);
+        listeViesObject.SetActive(true);
+        fadeAnim.Play("DebutJeuUX");
     }
 
     //Fonction pour faire Bouger le canon selon le AIM
