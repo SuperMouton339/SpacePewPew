@@ -15,9 +15,6 @@ public class GameManager : MonoBehaviour
     //[SerializeField] private int vies = 3;
     [SerializeField] private GameObject[] listeVies;
     [SerializeField] private GameObject mort;
-    [SerializeField] private string textGagne = "Vous avez gagné!";   
-    [SerializeField] private string textPerdu = "Vous êtes mort!";
-    [SerializeField] private GameObject animPerdu;
     [SerializeField] private Slider sliderProgression;
     [SerializeField] private GameObject sliderObject;
     [SerializeField] private GameObject listeViesObject;
@@ -39,10 +36,6 @@ public class GameManager : MonoBehaviour
 
     //Animations
     [SerializeField] private Animator fadeAnim;
-
-
-    //Manager temporaire
-    [SerializeField] private TextMeshProUGUI textMilieu;
 
 
     private GameObject ennemiTarget;

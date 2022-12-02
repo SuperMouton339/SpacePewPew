@@ -53,15 +53,12 @@ public class AimMouvement : MonoBehaviour
         {
             fctionAppeler++;
             Invoke("DialogueIntro", secondeDappel);
+            
         }
         
         
 
-        /*else
-        {
-            Debug.Log("Je ne detecte pas le joueur");
-            transform.position = Input.mousePosition;
-        }*/
+       
 
     }
 
@@ -69,10 +66,12 @@ public class AimMouvement : MonoBehaviour
     {
         if (message.Values[0].FloatValue > 0)
         {
+            
             joueurDetecte = true;
         }
         else if(message.Values[0].FloatValue == 0)
         {
+            
             joueurDetecte = false;
         }
 

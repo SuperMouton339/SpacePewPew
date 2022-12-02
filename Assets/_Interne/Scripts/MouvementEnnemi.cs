@@ -25,7 +25,7 @@ public class MouvementEnnemi : MonoBehaviour
     {
         VerifJoueurVivant();
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
 
         if (collision != null && collision.gameObject == target)

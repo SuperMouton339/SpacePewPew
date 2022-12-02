@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour
 
     void Start()
     {
-        Invoke("Destroy", 10f);
+        Invoke("DestroyMissile", 10f);
     }
 
     // Update is called once per frame
@@ -23,16 +23,15 @@ public class Projectile : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if( collision.gameObject.tag == "ennemi")
-        {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
+        
+         Destroy(collision.gameObject);
+         Destroy(gameObject);
+        
         
         
     }
 
-    private void Destroy()
+    private void DestroyMissile()
     {
         
         Destroy(gameObject);
@@ -42,10 +41,12 @@ public class Projectile : MonoBehaviour
 
     private void OnDestroy()
     {
-        if(explosionMissile != null)
+        
+        if (explosionMissile != null)
         {
             
             Instantiate(explosionMissile, gameObject.transform.position, Quaternion.identity);
+            
         }
     }
 }

@@ -104,7 +104,7 @@ public class PewPew : MonoBehaviour
     //Fonctions de speech
     private void RecognizedSpeech(PhraseRecognizedEventArgs speech)
     {
-        Debug.Log(speech.text);
+        
         actions[speech.text].Invoke();
     }
     private void Pew()
