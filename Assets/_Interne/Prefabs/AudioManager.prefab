@@ -83,8 +83,8 @@ MonoBehaviour:
   alarme: {fileID: 8300000, guid: b2fdf80464fa442758dfc64a85ad3b3c, type: 3}
   essuiesGlace: {fileID: 8300000, guid: 101ffcbfd20994a4c9621d82c40a9ea5, type: 3}
   moteurIdle: {fileID: 0}
-  moteurPart: {fileID: 0}
-  moteurMarche: {fileID: 0}
+  moteurPart: {fileID: 8300000, guid: e08bad3d333f0443b87d303fc1c19d98, type: 3}
+  moteurMarche: {fileID: 8300000, guid: d71e44dac2e8742e7aacb45d24c230f2, type: 3}
   dialogueIntro: {fileID: 8300000, guid: 43f1a76f31e6d4045a0bff0b7de9b73c, type: 3}
   dialogueVictoire: {fileID: 8300000, guid: fd71c5d7780a0497092f7109552ec2eb, type: 3}
   dialogueDefaite: {fileID: 8300000, guid: 4fc7775bafb6d4d379b617dd3e136da8, type: 3}
