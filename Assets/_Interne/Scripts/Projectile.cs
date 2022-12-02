@@ -23,9 +23,13 @@ public class Projectile : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if( collision.gameObject.tag == "ennemi")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
         
-        Destroy(collision.gameObject);
-        Destroy(gameObject);
+        
     }
 
     private void Destroy()

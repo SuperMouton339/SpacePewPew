@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (vivant && !gagne)
+        if (vivant && !gagne && SceneManager.GetActiveScene().buildIndex == 1)
         {
             ProgressBar();
             BougeCanonAvecAim();
