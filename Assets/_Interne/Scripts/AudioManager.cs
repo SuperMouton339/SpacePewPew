@@ -24,6 +24,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] public AudioClip dialogueIntro;
     [SerializeField] public AudioClip dialogueVictoire;
     [SerializeField] public AudioClip dialogueDefaite;
+    [SerializeField] public AudioClip dialogueCollision1;
+    [SerializeField] public AudioClip dialogueCollision2;
 
     [SerializeField] public AudioClip dialogueCommencerJeu;
 
@@ -74,6 +76,16 @@ public class AudioManager : MonoBehaviour
     public void Transition()
     {
         sceneTransitions.IntroAnimation();
+    }
+
+    public void DialogueCollision1()
+    {
+        audioSource.PlayOneShot(dialogueCollision1);
+    }
+
+    public void DialogueCollision2()
+    {
+        audioSource.PlayOneShot(dialogueCollision2);
     }
 
     public void DialoguePerdu()

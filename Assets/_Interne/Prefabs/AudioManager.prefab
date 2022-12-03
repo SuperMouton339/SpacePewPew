@@ -88,6 +88,8 @@ MonoBehaviour:
   dialogueIntro: {fileID: 8300000, guid: 43f1a76f31e6d4045a0bff0b7de9b73c, type: 3}
   dialogueVictoire: {fileID: 8300000, guid: fd71c5d7780a0497092f7109552ec2eb, type: 3}
   dialogueDefaite: {fileID: 8300000, guid: 4fc7775bafb6d4d379b617dd3e136da8, type: 3}
+  dialogueCollision1: {fileID: 8300000, guid: 9d962f10511e24a5e8dbf11bc43fe4da, type: 3}
+  dialogueCollision2: {fileID: 8300000, guid: c72131d86b4eb474da376d39b3ea354b, type: 3}
   dialogueCommencerJeu: {fileID: 8300000, guid: ca85465a3c434408b8a4bc7f2a1266d0, type: 3}
   audioSource: {fileID: 8425314047563988965}
 --- !u!82 &8425314047563988965

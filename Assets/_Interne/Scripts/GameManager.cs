@@ -209,6 +209,16 @@ public class GameManager : MonoBehaviour
             {
                 listeVies[i].SetActive(false); // désactiver l'élément du tableau listeVies à l'index i
 
+                if(i == 2)
+                {
+                    audioManager.DialogueCollision1();
+                }
+
+                if (i == 1)
+                {
+                    audioManager.DialogueCollision2();
+                }
+
                 if (i == listeVies.Length - 1) // si l'index i est egale a la grandeur du tableau listeVies -1
                 {
                     Perdre(); //lancer la fonction GameOver
@@ -218,7 +228,5 @@ public class GameManager : MonoBehaviour
                 return; //arreter la boucle
             }
         }
-        
-        
     }
 }
