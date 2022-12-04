@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     //Animations
     [SerializeField] private Animator fadeAnim;
+    [SerializeField] private Animator fadeAnimDroit;
+    [SerializeField] private Animator fadeAnimGauche;
 
 
     private GameObject ennemiTarget;
@@ -55,6 +57,8 @@ public class GameManager : MonoBehaviour
         {
             //audioManager.DialogueIntro(); //faire jouer le dialogue d'intro
             fadeAnim.Play("FonduNoir");
+            fadeAnimDroit.Play("FonduNoir");
+            fadeAnimGauche.Play("FonduNoir");
         }
 
         else if (SceneManager.GetActiveScene().buildIndex == 1)
@@ -79,6 +83,7 @@ public class GameManager : MonoBehaviour
             ProgressBar();
             BougeCanonAvecAim();
             //VerifEnnemi();
+            
         }
 
         else
@@ -195,7 +200,12 @@ public class GameManager : MonoBehaviour
     {
         rapiditeEnnemi = 0;
         audioManager.DialoguePerdu();
+
         fadeAnim.Play("FonduNoir 2");
+        fadeAnimDroit.Play("FonduNoir 2");
+        fadeAnimGauche.Play("FonduNoir 2");
+
+
         mort.gameObject.SetActive(true);
         vivant = false;
     }
@@ -214,12 +224,12 @@ public class GameManager : MonoBehaviour
                     audioManager.DialogueCollision1();
                 }
 
-                if (i == 1)
+                else if (i == 1)
                 {
                     audioManager.DialogueCollision2();
                 }
 
-                if (i == listeVies.Length - 1) // si l'index i est egale a la grandeur du tableau listeVies -1
+                else if (i == listeVies.Length - 1) // si l'index i est egale a la grandeur du tableau listeVies -1
                 {
                     Perdre(); //lancer la fonction GameOver
                     return;//arreter la boucle
