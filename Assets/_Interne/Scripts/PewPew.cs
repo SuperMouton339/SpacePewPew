@@ -3,15 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Windows.Speech;
+using UnityEngine.Windows.Speech; //implementation de cortana
 using TMPro;
 
 
 public class PewPew : MonoBehaviour
 {
     //variable speech
-    private KeywordRecognizer keywordRecognizer;
-    private Dictionary<string, Action> actions = new Dictionary<string, Action>();
+    private KeywordRecognizer keywordRecognizer; //variable qui permet a cortana d'écouter et de détecter les mots clés
+    private Dictionary<string, Action> actions = new Dictionary<string, Action>(); //variable tableau avec les mots clés (Dictionnaire)
 
 
     //le missile
@@ -74,17 +74,18 @@ public class PewPew : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        actions.Add("pew", Pew);
+    {   
+        //ajout des mots pew, pew pew, piou et piou piou dans le dictionnaires des mots clé à détecter
+        actions.Add("pew", Pew); 
         actions.Add("pew pew", Pew);
         actions.Add("piou", Pew);
         actions.Add("piou piou", Pew);
         
         
 
-        keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
-        keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
-        keywordRecognizer.Start();
+        keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray()); //ajout du dictionnaire complet dans la variable keywordRecognizer
+        keywordRecognizer.OnPhraseRecognized += RecognizedSpeech; //dès qu'elle entend des combinaisons de mots de la variable keywordRecognizer, elle lance la méthode RecognizedSpeech
+        keywordRecognizer.Start(); //on instantie cortana pour qu'elle écoute
     }
 
     // Update is called once per frame
@@ -104,8 +105,9 @@ public class PewPew : MonoBehaviour
     //Fonctions de speech
     private void RecognizedSpeech(PhraseRecognizedEventArgs speech)
     {
-        
+        //lorsque reconnue, lance la fonction associé au mot clé. La méthode étant Pew!! pour tiré le missile!!!
         actions[speech.text].Invoke();
+
     }
     private void Pew()
     {

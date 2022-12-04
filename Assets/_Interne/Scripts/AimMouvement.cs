@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using extOSC;
+using extOSC; //utilisation de l'extension OSC pour communiquer avec TouchDesigner
 using UnityEngine.SceneManagement;
 
 
 public class AimMouvement : MonoBehaviour
-{
+{   
+    //les variables ayant les noms associés aux variables envoyés par TouchDesigner
     public string xAddress = "/teteHorizontal";
     public string yAddress = "/teteVertical";
     public string messageJoueur = "/joueurDetecte";
 
-    public OSCReceiver posReceiver;
-    RectTransform UI_Element;
+    //variable nécéssaire pour recevoir du OSC de touchdesigner + la composante du crosshair dans la scene le faire bouger!
+    public OSCReceiver posReceiver; //recepteur OSC
+    RectTransform UI_Element; //crosshair
+
+
     private float x;
     private float y;
     private bool joueurDetecte;
@@ -26,8 +30,11 @@ public class AimMouvement : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        UI_Element = GameObject.Find("Crosshair").GetComponent<RectTransform>();
+
+        UI_Element = GameObject.Find("Crosshair").GetComponent<RectTransform>(); //va chercher la composante RectTransform et met le dans la varible declarer plus haut
         secondeDappel = gameManager.tempsDappelDialogueIntro;
+
+        //lorsque le recepteur OSC recoit une valeur des variables demander, appel leur fonction
         posReceiver.Bind(xAddress, ReceiveMessageX);
         posReceiver.Bind(yAddress, ReceiveMessageY);
         posReceiver.Bind(messageJoueur, JoueurDetecte);
