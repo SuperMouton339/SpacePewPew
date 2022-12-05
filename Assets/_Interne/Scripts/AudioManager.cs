@@ -30,6 +30,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] public AudioClip dialogueCommencerJeu;
 
     [SerializeField] public AudioSource audioSource;
+    [SerializeField] public AudioSource audioSourceMusique;
+    [SerializeField] public AudioSource audioSourceMoteur;
 
 
 
@@ -70,6 +72,7 @@ public class AudioManager : MonoBehaviour
     public void Decollage()
     {
         audioSource.PlayOneShot(dialogueCommencerJeu);
+        audioSourceMoteur.Play();
         Invoke("Transition", dialogueCommencerJeu.length);
     }
 

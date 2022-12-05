@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     {
         ennemiTarget = GameObject.Find("HitTarget");
         tempsExperienceMinute *= 60;
-
+        
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             //audioManager.DialogueIntro(); //faire jouer le dialogue d'intro
@@ -194,13 +194,15 @@ public class GameManager : MonoBehaviour
     private void Gagne()
     {
         audioManager.DialogueGagne();
+        audioManager.audioSourceMusique.Stop();
     }
     
     private void Perdre()
     {
         rapiditeEnnemi = 0;
         audioManager.DialoguePerdu();
-
+        audioManager.audioSourceMusique.Stop();
+        audioManager.audioSourceMoteur.Stop();
         fadeAnim.Play("FonduNoir 2");
         fadeAnimDroit.Play("FonduNoir 2");
         fadeAnimGauche.Play("FonduNoir 2");
@@ -218,16 +220,17 @@ public class GameManager : MonoBehaviour
             if (listeVies[i].activeInHierarchy == true) //si l'élément se trouvant dans le tableau listeVies à l'index i EST activer dans la hierarchy des GameObject
             {
                 listeVies[i].SetActive(false); // désactiver l'élément du tableau listeVies à l'index i
+               
 
-                if(i == 2)
+                if (i == 0)
                 {
                     audioManager.DialogueCollision1();
                 }
 
-                else if (i == 1)
+                /*else if (i == 1)
                 {
                     audioManager.DialogueCollision2();
-                }
+                }*/
 
                 else if (i == listeVies.Length - 1) // si l'index i est egale a la grandeur du tableau listeVies -1
                 {
