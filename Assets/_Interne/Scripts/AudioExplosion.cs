@@ -19,6 +19,6 @@ public class AudioExplosion : MonoBehaviour
     {
         int sonAleatoire = Random.Range(0, GameObject.Find("AudioManager").GetComponent<AudioManager>().explosions.Length);
         gameObject.GetComponent<AudioSource>().PlayOneShot(GameObject.Find("AudioManager").GetComponent<AudioManager>().explosions[sonAleatoire]);
-        ;
+        
     }
 }
