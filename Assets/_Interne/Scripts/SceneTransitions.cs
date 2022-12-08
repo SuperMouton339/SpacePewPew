@@ -44,4 +44,14 @@ public class SceneTransitions : MonoBehaviour
     {
         fadeAnim.Play("FonduNoir 2");
     }
+
+    public void CameraShake()
+    {
+        screenshake.Play("HitShake");
+    }    
+    
+    public void CameraShakeEnd()
+    {
+        screenshake.Play("HitShake_end");
+    }
 }

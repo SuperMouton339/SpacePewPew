@@ -217,13 +217,13 @@ Material:
     - _UVSec: 0
     - _ValueAdd: 0
     - _ValueMultiply: 1
-    - _XShake: 0.005
-    - _XShakeSpeed: 27
+    - _XShake: 0.023
+    - _XShakeSpeed: 39
     - _XWobbleAmount: 0
     - _XWobbleSpeed: 100
     - _XWobbleTiling: 0.1
-    - _YShake: 0.02
-    - _YShakeSpeed: 19
+    - _YShake: 0.062
+    - _YShakeSpeed: 33
     - _YWobbleAmount: 0
     - _YWobbleSpeed: 100
     - _YWobbleTiling: 0.1

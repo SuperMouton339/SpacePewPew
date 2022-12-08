@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     //Manager les Manager
     [SerializeField] public AudioManager audioManager;
+    [SerializeField] public SceneTransitions sceneTransition;
 
     //Animations
     [SerializeField] private Animator fadeAnim;
@@ -233,11 +234,13 @@ public class GameManager : MonoBehaviour
                 }*/
 
                 else if (i == listeVies.Length - 1) // si l'index i est egale a la grandeur du tableau listeVies -1
-                {
+                {   
+                    sceneTransition.CameraShakeEnd(); //Shake de caméra
                     Perdre(); //lancer la fonction GameOver
                     return;//arreter la boucle
                 }
                 audioManager.ImpactVaisseau(); //faire jouer la variable audio audioPerteVie lorsque le perso perd une vie
+                sceneTransition.CameraShake(); //Shake de caméra
                 return; //arreter la boucle
             }
         }

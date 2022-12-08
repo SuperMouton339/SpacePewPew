@@ -11447,7 +11447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1684502961
 Animator:
   serializedVersion: 4
@@ -15984,6 +15984,10 @@ PrefabInstance:
       propertyPath: listeViesObject
       value: 
       objectReference: {fileID: 2022210717}
+    - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
+      propertyPath: sceneTransition
+      value: 
+      objectReference: {fileID: 1275175949}
     - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
       propertyPath: sliderProgression
       value: 
