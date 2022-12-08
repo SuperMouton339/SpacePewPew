@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Animator fadeAnim;
     [SerializeField] private Animator fadeAnimDroit;
     [SerializeField] private Animator fadeAnimGauche;
+    [SerializeField] private Animator lumieresVaisseau;
 
 
     private GameObject ennemiTarget;
@@ -215,6 +216,8 @@ public class GameManager : MonoBehaviour
 
     public void PerdreVie()
     {
+        lumieresVaisseau.SetInteger("Hit", lumieresVaisseau.GetInteger("Hit") + 1); //Changement de lumières
+
         for (int i = 0; i < listeVies.Length; i++) //Boucle parcourant la grandeur du tableau listeVies
         {
             //listeVies[i].GetComponent<image>().sprite == variableAvecImage si on vx utiliser un changement d'image
@@ -226,12 +229,13 @@ public class GameManager : MonoBehaviour
                 if (i == 0)
                 {
                     audioManager.DialogueCollision1();
+
                 }
 
-                /*else if (i == 1)
+                else if (i == 1)
                 {
                     audioManager.DialogueCollision2();
-                }*/
+                }
 
                 else if (i == listeVies.Length - 1) // si l'index i est egale a la grandeur du tableau listeVies -1
                 {   

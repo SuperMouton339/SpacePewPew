@@ -2773,6 +2773,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.105645, y: 3.697409, z: 3.6133227}
   m_Center: {x: 0.18129492, y: 1.3487045, z: -1.3066761}
+--- !u!95 &295829718
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295829713}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 64d54c09a2ba673458b90e0ed6fab8e5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &305075660
 GameObject:
   m_ObjectHideFlags: 0
@@ -15988,6 +16008,10 @@ PrefabInstance:
       propertyPath: sceneTransition
       value: 
       objectReference: {fileID: 1275175949}
+    - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
+      propertyPath: lumieresVaisseau
+      value: 
+      objectReference: {fileID: 295829718}
     - target: {fileID: 6247719341568856403, guid: bcf45f1ba4a97324dbba86cd828b7e11, type: 3}
       propertyPath: sliderProgression
       value: 
